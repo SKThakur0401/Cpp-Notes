@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Registration form</title>
+        <script language="javascript">
+            function validate()
+            {
+                var fname, lname, mAddress1, mAddress2;
+                fname= document.forms("frm1").fname.value;
+                lname= document.forms("frm1").lname.value;
+                mAddress1= document.forms("frm1").mAddress1.value;
+                mAddress2= document.forms("frm1").mAddress2.value;
+
+                if(fname== "" || lname=="")
+                {
+                    alert("Please enter all details!!")
+                }
+
+                else if(mAddress1== "" && mAddress2== "")
+                {
+                    alert("Atleast one address has to be filled!")
+                }
+
+                else
+                {
+                    alert("Success");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h2><center>Employee Registration form</center></h2>
+        <form name="frm1" action="">
+        
+            <table align="center">
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="radio" name="gender" id="fk"> Mr.
+                        <input type="radio" name="gender" id="fk"> Mrs.
+                        <input type="radio" name="gender" id="fk"> Ms.
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" name="fname" value="First Name">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" name="lname" value="Last Name">
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td>Mail Address1</td>
+                    <td>
+                        <input type="text" name="mAddress1"></input>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Mail Address2</td>
+                    <td>
+                        <input type="text" name="mAddress2"></input>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <input type="text"></input>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>state</td>
+                    <td>
+                        <select name="fk" id="ef">
+                            <option value="Gujju">Gujarat</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Lucknow">Lucknow</option>
+                            <option value="Patna">Patna</option>
+                            <option value="Ranchi">Ranchi</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Indore">Indore</option>
+                        </select>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Zip</td>
+                    <td>
+                        <input type="text"></input>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Upload Photo</td>
+                    <td>
+                        <input type="file" name="fk" id="tt">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>E-mail</td>
+                    <td>
+                        <input type="email"></input>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Mobile</td>
+                    <td>
+                        <input type="number" value=91></input>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Languages Known</td>
+                    <td>
+                        <input type="checkbox"> Gujarati
+                        <br>
+                        <input type="checkbox"> Hindi
+                        <br>
+                        <input type="checkbox"> English
+                        <br>
+                        <input type="checkbox"> Marathi
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Additional Information</td>
+                    <td>
+                        <textarea rows="5" cols="40">Optional</textarea>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td></td>
+                    <td>
+                        <!-- <input type="button" onclick="validate()" name="btn" value="submit"/> -->
+                        <input type="submit" onclick="validate()" name="btn" value="submit"/>
+
+                        <input type="reset" value="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,11 @@
+/* To create our own class, we just need to put a dot " . " and then write the class name and within curly braces it's various styles   */
+
+.blueMaker{
+    color:blue;
+}
+
+.cursive{
+    font-family: cursive;
+}
+
+

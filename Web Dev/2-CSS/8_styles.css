@@ -1,0 +1,29 @@
+#div1{
+    height: 300px;
+    width: 200px;
+
+    background-color:green;
+}
+
+
+#div2{
+    height: 50%;        /* Since div1 is of 300 pixel height, it will be of half that height, i.e. 150-pixel,  */
+
+    width: 50%;
+    background-color: rgba(0, 255, 0, 0.637);
+}
+
+
+#div3{
+    height: 50vh;
+    width: 50vw;
+    background-color: rgba(159, 77, 77, 0.5);  /* here 'a' stands for "opacity" and opacity varies from 0 to 1 ,   1 means full opacity that is full proper red color  and if opacity is reduced so is the color */
+}
+
+
+#div4{
+    height: 14rem;
+    width: 14rem;
+    background-color: black;
+}
+

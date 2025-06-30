@@ -1,0 +1,14 @@
+#this_is_id{
+    font-size: xx-large;
+    font-family: cursive;
+}
+
+.this_is_class{
+    color: blue;
+}
+
+
+p:hover{
+    color: pink;
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>js Factorial</title>
+
+        <script lang="javascript">
+
+            var x,y, sum, diff;
+
+            x= parseInt(window.prompt("Enter x : "));
+            y= parseInt(window.prompt("Enter y : "));
+
+            sum= x+y;
+            diff=x-y;
+
+            document.writeln("The sum is : " + sum);
+            document.writeln("                  ");
+            document.writeln("The diff is : " + diff);
+            document.writeln("                  ");
+            var fac=1;
+            for(i=1; i<=sum; i++)
+            {
+                fac*=i;
+            }
+
+            document.writeln("              Factorial of sum is : " + fac);
+        </script>
+    </head>
+
+    <body>
+        <p>
+            Did you like my HTML code!!?
+        </p>
+    </body>
+</html>

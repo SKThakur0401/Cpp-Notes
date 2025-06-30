@@ -1,0 +1,16 @@
+.amplifier{
+    color: brown;
+    font-size:29px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Accessing via ID---v   for  'paragraph-4'   */
+
+#p4_ki_ID{
+    color:green;
+
+    font-family: cursive;
+}
+
+

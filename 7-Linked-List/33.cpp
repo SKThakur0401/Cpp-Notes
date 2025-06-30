@@ -1,0 +1,3 @@
+// Hare and tortoise method is quite important, it can be used to 
+// 1. find mid of linkedlist
+// 2. check whether a given linked list is (circular/have a loop) or not (bcoz in case of loop within a linked-list, or in case of a circular linked list, the slow ptr and fast ptr will coincide with each other at some point!!! but this will not happen if "NULL" is reached by fast ptr....which it will not in-case there's a loop)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>trailer</title>
+        <script language="javascript">
+
+            function validation()
+            {
+                var name; var password;
+                name= document.forms("frm1").name.value;
+                password= document.forms("frm1").password.value;
+
+                if(name== "" || password== "")
+                {
+                    alert("Please fill all data");
+                }
+                
+                else
+                {
+                    alert("Successful")
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="frm1">
+            name <input type="text" name="name">
+            password <input type="text" name="password">
+
+            <input type="submit" onclick="validation" value="submit">
+        </form>
+    </body>
+</html>
+

@@ -1,0 +1,38 @@
+<!-- Now, if we have several 'selectors' then the order of priority is " type < class < id "
+
+which means, for example if there is blue color for 'p' tag.. and there's a class red-maker, and this class is applied on a 'p' tag... then the text will effectively be red!! Now, if there is grey color given for 'id' of that particular 'p' tag, then it will effectively be grey!!! ,, this is the order of priority 
+
+.... Now, we have one thing which have even higher priority than 'id' ! , it is "inline CSS!!!"
+
+so order is : inline > id > class > type
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Priority</title>
+
+        <link rel="stylesheet" type="text/css" href="5_styles.css" >
+    </head>
+
+    <body>
+        <p>
+            This is first para with only type specification
+        </p>
+
+        <p class="red_maker">
+            This is second para with type as well as class specification, here class takes priority over type!
+        </p>
+
+        <p class="red_maker" id="para-id">
+            This is third para with type, class and ID specification, here 'id' takes priority over class and type!!
+        </p>
+
+        <p class="red_maker" id="para-id" style="color:green;">
+            This is fourth para with type, class and ID and 'inline' specification, here 'inline CSS' takes priority over all!!!
+        </p>
+
+    </body>
+</html>
+

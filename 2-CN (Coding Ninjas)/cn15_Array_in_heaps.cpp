@@ -1,0 +1,29 @@
+//  ---ARRAY USING DYNAMIC ALLOCATION---- (AN ARRAY STORED IN THE DYNAMIC MEMORY :)
+
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+
+int main(){ 
+    int j=3293829;
+    int jesu=69;
+    if(jesu == 69){
+        int i=10;       //THIS IS  A LOCAL VARIABLE; INTRODUCED WITHIN THE "CURLY BRACES" OF "IF" ;;; IN REALITY THIS MEMORY SPACE WILL BE DELETED AFTER PROGRAM COMES OUT OF THIS FUNCTION
+        j=10;
+    }
+    cout<< i <<endl;    //THIS LINE WILL GIVE ERROR, DUE TO THE ABOVE MENTIONED REASON
+    cout<< j <<endl;    //THIS LINE WILL RUN PERFECTLY BCOZ, "j" WAS INITIATED OUTSIDE THE "if" SO THAT VARIABLE STILL EXISTS AND ALL CHANGES MADE TO IT WILL BE REAL :) ..... NOTE: BUT VARIABLES "INITIATED" WITHIN "if" WILL BE DESTROYED AFTER WE MOVE OUT OF "if"
+
+    if(jesu == 69){
+        int *p= new int;    //THIS HOWEVER WILL NOT BE DELETED ,,, IT WILL OCCUPY 4-BITS IN HEAP EVEN AFTER WE COME OUT OF THIS LOOP;;;TO AVOID THAT, WE ARE TYPING THE NEXT LINE
+        delete p;           //NOTE: THIS DOES NOT DELETE "p" , but what's stored in "p" ITS ELEMENT DELETION
+
+    // int *p =new int[100];    //IN CASE "p" IS POINTING TO ENTIRE ARRAY
+    // delete [] p;         //IT'S ARRAY DELETION   ;;;;THIS IS IMP, ONE OF THE MAIN REASONS WHY "MOBILE PHONE" APPS CRASHED
+    }
+
+    cout<< *p <<endl;
+    return 0;
+}

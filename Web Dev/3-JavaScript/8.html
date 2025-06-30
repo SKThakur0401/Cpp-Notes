@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Arrays in JS</title>
+
+        <script lang="javascript">
+
+            var arr= new Array;     // Same as our Vectors, we basically created a vector with undefined size... so we need to push element
+
+            arr.push(3);
+            arr.push(6);
+            arr.push(9);
+            arr.push(12);
+            arr.push(15);
+
+            document.writeln(arr[1]);
+            document.writeln(arr[3]);
+
+
+            var abcd= new Array(4);     // Making a vector with size=4;
+
+            abcd[0]=5;
+            abcd[1]=6;
+            abcd[2]=7;
+            abcd[3]=8;
+            abcd.reverse();         // This will reverse the array
+            abcd.sort();            // To sort the array
+
+            abcd.pop();             // To remove the last element : Note: can only be used to delete the last element... if you need to delete 2nd last element also, write pop command again...
+
+            document.writeln(abcd[0]);
+            document.writeln(abcd[3]);
+
+        </script>
+    </head>
+</html>

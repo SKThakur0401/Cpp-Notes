@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>  <!-- NOTE: IN TABLES...HORIZONTALS ARE ROWS______AND VERTICALS ARE COLUMNS -->
+    </head>
+    <body>
+        <table align="center" border="3" height="550" width="820">   <!--THE SYNTAX TO START THE TABLE, IMPORTANT-->
+            <thead>
+                <tr>        <!-- tr STANDS FOR TABLE ROWS...EACH ROW ELEMENT IS WITHIN <tr>......</tr> -->
+                    <th>Name</th>
+                    <th>Class</th>    <!-- th STANDS FOR TABLE HEADING AND td FOR TABLE DATA...th IS BOLD AND td IS NOT-->
+                    <th>Roll no</th>  <!--U CAN USE th or td..on your mood..but th is generally used for heading-->
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>saumya</td>
+                    <th rowspan="2">12D</th>  <!--rowspan="2"  means it will fill this element of the next
+                        row also so remember...u will not fill class for the next row..coz it's already 12D filled-->  
+                    <td>39</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>Akash</td>
+                    <!--SINCE THIS ROW HAS BEEN SPANNED, YOU WILL SKIP "CLASS",BCOZ 12D IS ALREADY THERE
+                        ...After name you will directly type Roll no. coz class is spanned -->
+                    <td>30</td>
+                    <td>93</td>
+                </tr>
+                <tr>
+                    <td>Bhavya</td>
+                    <td>12E</td>
+                    <th colspan="2">55</th>  <!--So..Roll no. and Marks column of Bhavya, both are spanned,
+                        so you will not add another column for Marks coz marks and Roll no. are same :) -->
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+

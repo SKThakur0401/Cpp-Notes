@@ -1,0 +1,21 @@
+h1{
+    color:blue;
+}
+
+p{
+    color:green;
+}
+
+h1 , p{                     /* Here we have made changes in both the container tags at the same time..rather than writing everything twice, we got our jobs done by writing it once :) */
+
+    font-family: sans-serif;
+    font-family: cursive;
+}
+
+
+h2, h3{
+    color: pink;
+}
+
+/* Now both  'h2'  and  'h3'  tags will be of pink color :) */
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factorial</title>
+        <script language="javascript">
+            var n;
+            n= parseInt(window.prompt("Enter Number whose factorial you want"));
+
+            if(n==0)
+            {
+                document.writeln("Factorial is : " + 1);
+            }
+
+            else
+            {
+                var fact=1;
+                for(i=1; i<=n; i++)
+                {
+                    fact*=i;
+                }
+
+                document.writeln("Factorial is : " + fact);
+            }
+        </script>
+    </head>
+</html>

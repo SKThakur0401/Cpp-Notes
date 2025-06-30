@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment Gateway(A Web Form sample)</title>
+</head>
+<body>
+    <form action="">    <!--USED FOR OPENING FORM...IN ACTION WE GIVE LOCATION OF SERVER..
+        ..WHERE THE USER FILLED DATA IS STORED(THE DATABASE) ...
+        here we don't have server so we simply left it blank-->
+
+
+        <h4><b>Fields followed by * mark are required to fill</b></h4>
+        <p>Name: <input type="text" name="name" id="fkerid"></p>  <!-- HERE, "type  name  id" are 3 key features
+            of input, where id(for now is senseless) name(can relate inputs...(inputs with same name are related)) -->
+        <p>
+            Password: <input type="password" name="pass" id="demonid">
+        </p>
+
+        
+        <!--   There are many input "types"......some common "types" are-    'text','password'(whatever u type is dotted), 'number'(takes only numbers as input),'email'(takes only @ shit things..will recommend your email),'checkbox'(gives u various options, u can select as many as u want),'radio'(gives u various options out of which only one we can select__e.g.Gender),'date'(gives u date)  -->
+
+
+
+
+        <p>
+            <fieldset>         <!--fieldset is used to encapsulate  a data within a box...where legend is a cool outline-->
+                <legend>GENDER</legend>
+                Male <input type="radio" name="gender" id="m" value="Male">
+                
+                
+                <!--for Male & Female, name is same(i.e. gender) so both are now linked...and as per rules of radio...only one can be choosen at a time_____similarly for name="specialty"..only one of those options can be choosen :)  -->
+
+                Female <input type="radio" name="gender" id="f" value="Female">
+                Lesbian <input type="radio" name="specialty" id="m" value="Lesbian">
+                Gay <input type="radio" name="specialty" id="m" value="Gay">
+                Bisexual <input type="radio" name="specialty" id="m" value="Bisexual">
+                Transgender <input type="radio" name="specialty" id="m" value="Transgender">
+
+                <!-- Note: U need to fill in "value" attributes because it is the only way the back-end could know what the user has given as input-->
+            </fieldset>
+        </p>
+        <h3>Which of the following food items you like</h3>
+        <p>
+            Cake <input type="checkbox" name="food" id="fk">
+            Bread<input type="checkbox" name="food" id="kerden">
+            Peanut Butter<input type="checkbox" name="food" id="kerden">
+            Chocolates<input type="checkbox" name="food" id="kerden">
+        </p>
+
+        <p>
+            Address: <textarea name="Address" id="ILDS" cols="160" rows="3"></textarea> <!--Is similar to input text, but it gives a large area for user to fill data which may be large (like an elaborate address)-->
+        </p>
+
+        <p>
+            Email ID:* <input type="email" name="email" id="elmail" required> <!--required key word won't allow the user to "submit" data without filling this field...NOTE: it's email so it won't allow user to submit if this field doesn't have "@" in between-->
+        </p>
+        <h3>Payment Info</h3>
+        <fieldset>
+            <p>  <!--   TO CREATE A DROP-DOWN LIST,WE USE "select" container tage and "option" tags...within which various options will be present for us to select from, we fill in various options  -->
+
+                <select name="card_type" id="" required>    
+                                                            <!-- We have added required attribute  so it is mandatory for us to select one of the items from the drop-down list... NOTE: we can also add an attribute called "multiple", which will allow us to choose multiple options from the drop-down list!! so u can select multiple options :) -->
+                    <option value="">--SELECT CARD--</option>
+                    <option value="visa">I am a VISA user</option>
+                    
+                    
+                    <!--NOTE: things filled in value is gone to the "backened" for further processing..i.e. if user selects I am a VISA user from dropdown list...the computer will read "visa"               PS: That's why -SELECT CARD- has no value   -->
+
+                    <!--I have added required key word...so user must choose a card name with a "proper value"-->
+
+
+                
+                    <option value="Rupay">Rupay</option>
+                    <option value="Paytm">Paytm</option>
+                </select>
+            </p>
+        <p>
+            Card Number: <input type="number" name="cn" id="nc">
+            CVV:* <input type="password" name="fd" id="fjkldsl" required>
+            Expiray Date: <input type="date" name="fdssf" id="ksfjle">
+
+        </p>
+        </fieldset>
+        <input type="submit" value="Pay Now">  <!--value will be displayed to the user as a button...to submit his data-->
+    </form>
+</body>
+</html>

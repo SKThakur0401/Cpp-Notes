@@ -1,0 +1,71 @@
+//         ---- CONSTRUCTORS IN C++ ----
+
+// IT'S SAME AS " __init__() "  FUNCTION IN PYTHON .... WHICH USED TO RUN AUTOMATICALLY_(WITHOUT CALLING)
+// WHATEVER U DO INSIDE IT, WILL BE REFLECTED FOR ALL OBJECTS AT THE TIME OF IT'S INITIALISATION
+
+// CODE INSIDE "CONSTRUCTOR" IS EXECUTED JUST AFTER AN OBJECT IS "CREATED" AND IT'S EXECUTED FOR ALL OBJECTS
+ 
+
+#include<iostream> 
+#include<cmath>
+using namespace std;
+
+class student
+{
+    public :
+    int age;
+    int rollNum;
+
+
+    private :
+    int year;
+
+
+    public :
+
+    student(){
+        cout<< "This object will use the first constructor...(whose code is same as that of default constructor) bcoz it has 0 parameters" <<endl;
+
+    };          // DEFAULT CONSTRUCTOR AUTOMATICALLY EXECUTES WHEN WE TYPE "student s1" in main..
+                // IT PUTS "GARBAGE VALUE" IN ALL THE PROPERTIES WHOSE VALUE IS NOT FILLED 
+
+                // INTERESTINGLY, WE CAN CREATE OUR OWN CONSTRUCTORS...
+
+    student(int r){         //THIS IS CALLED A "PARAMETERIZED CONSTRUCTOR" BCOZ IT HAS A PARAMETER "int r"
+        cout<< "This object will use the second constructor bcoz it has 1 parameter..roll number" <<endl;
+        rollNum =r;
+    }                       //SO, THIS IS A BIT DIFFERENT FROM THE DEFAULT CONSTRUCTOR...IT TAKES AN ARGUMENT AND STORES IT IN "rollNum" PROPERTY,,, SO WE BASICALLY SET THE VALUE OF "rollNum" FOR AN OBJECT, WHILE MAKING THE OBJECT ITSELF :)          "student s2(8)"  this will create a student whose rollNum is 8...and age will still hold a garbage value :)
+
+    student(int a, int r)
+    {
+        cout<< "This object will use the third constructor bcoz it has 2 parameters" <<endl;
+        cout<< "ALWAYS REMEMBER...CODE INSIDE CONSTRUCTOR WILL AUTOMATICALLY AT THE TIME U CREATE AN OBJECT :)" <<endl;
+        age = a;
+        rollNum = r;
+
+        // SO WE CREATED A CONSTRUCTOR WITH 2 PARAMETERS ,,, AND IT WILL FILL BOTH "age" AND "rollNum"
+    }
+
+    // NOW WE HAVE 3 CONSTRUCTORS :)
+
+    // student s1;          //THIS ONE WILL MAKE USE OF THE FIRST CONSTRUCTOR( THE DEFAULT ONE)
+    // student s2(56);      // THIS WILL USE SECOND ONE,WHICH TAKES ROLL NUMBER AS ARGUMENT
+    // student s3(17, 56);  // THIRD ONE, WHICH TAKES BOTH ROLL NUMBER AND AGE AS ARGUMENT
+
+    // HOWEVER IF WE HADN'T TOUCHED/MADE "STUDENT FUNCTIONS"..... THERE WOULD HAVE BEEN ONLY ONE STUDENT FUNCTION, WHICH IS THE DEFAULT STUDENT FUNCTION...WHICH LOOKS THE SAME AS OUR FIRST STUDENT FUNCTION
+    // SINCE WE ARE NOT USING THE "DEFAULT CONSTRUCTOR FUNCTION" AND CREATED OUR OWN "CONSTRUCTOR FUNCTIONS" , WE HAVE TO CREATE A FUNCTION FOR THE CASE OF NO ARGUMENTS (WHICH IS THE SAME CASE AS DEFAULT FUNCTION CASE....BUT WE HAVE TO CREATE IT THIS TIME BCOZ WE ARE CREATING SPECIAL CASES OF 1 AND 2 ARGUMENTS ALSO...AND WE ARE NOT USING DEFAULT CONSTRUCTOR FUNCTION... INSTEAD WE ARE MAKING OUR OWN CONSTRUCTOR FUNCTIONS...IN WHICH FOR THE CASE OF 0 ARGUMENTS WE ARE USING THE SAME CODE AS THAT OF DEFAULT CONSTRUCTOR FUNCTION :)
+};
+
+int main(){
+    
+    //NOTE : CONSTRUCTOR FUNCTIONS RUN AS SOON AS YOU CREATE AN OBJECT  AND IT RUNS FOR THAT OBJECT
+
+    student s1;
+    student s2(56);      //THIS WILL AUTOMATICALLY USE THE SECOND CONSTRUCTOR FUNCTION..COZ IT HAS 1 PARAMETERS... AND WILL SET rollNum=56 for "s2"
+    student s3(17,56);   //THIS WILL AUTOMATICALLY USE THE THIRD CONSTRUCTOR FUNCTION COZ IT HAS 2 PARAMETERS..and set the rollNum and age for "s3"
+
+    return 0;
+}
+
+// DEFAULT CONSTRUCTOR JUST LIKE OTHER CONSTRUCTORS, EXECUTE IMMEDIATELY AFTER AN OBJECT IS MADE.
+// "IT FILLS ALL THE PROPERTIES LIKE  age, name , rollNum , eID  with 'GARBAGE VALUE' (IT DOES NOT LEAVE THEM EMPTY!!!) ... AFTER THAT , IF YOU DO s1.age =19 etc... the value gets overwritten

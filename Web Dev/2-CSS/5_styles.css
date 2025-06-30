@@ -1,0 +1,17 @@
+p{
+    color:blue;
+}
+
+.red_maker{
+    color:red;
+}
+
+#para-id{
+    color: grey;
+}
+
+
+
+/* If by mistake u made the same class twice, with minor difference... for example if u again make the 'red_maker' class with color:brown ... then the new 'red_maker' class will be executed and the previous one will be ignored!! */
+
+

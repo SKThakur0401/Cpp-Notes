@@ -1,0 +1,25 @@
+
+/* The thing which we are doing below is called nesting!!, we r searching for a 'p' tag within 'li' tag... so any 'p' tag which is within a list or li tag... will turn to blue color:) */
+
+li p{
+    color:blue;
+}
+
+/* If we had a "  ,  " instead of a  space, then it would have been a case of grouping, which means all the data within any 'p' tag or any 'li' tag will change to 'blue'!!!   */
+
+
+/* Now, for nesting, we don't necessarily need to use the 'types' like 'p' or 'li' ... we can also use "id" or "class"  */
+
+
+#impNotes h3{       /* so, this will make h3 tag of a container having id= "impNotes" as cursive text!! */
+    font-family: cursive;
+}
+
+
+/* Now we will write CSS for hovering text :) */
+
+#hx:hover{
+    color:orange;
+}
+
+/* So, container tag with id="hx" will have this feature that when we hover over it, our text will turn orange!! */

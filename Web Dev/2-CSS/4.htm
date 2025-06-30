@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>HTML_CSS</title>
+
+        <link rel="stylesheet" type="text/css" href="4_styles.css" >
+
+        <!-- Note: in the file above, we have linked a CSS file, in which we have specified what the 'p' tag should do!,,, but in the line below also! I have specified what the 'p' tag should do (within style container tag) ...             ""now the 'p' tag will do what the last command to it will be given""  here the 'style' tag is the last command so it will follow it! ... but! if the 'p' tag has some inline commands given to it, Then it will follow the inline commands!!! coz it will be the last command given to it-->
+
+        <style type="text/css" >
+
+            p{
+                color:blueviolet;
+                font-size:21px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <p style="color:blanchedalmond; font-size:25px">
+            This is para one on it's way
+        </p>
+
+        <p style="color:rgb(165, 42, 42); font-size:23px;">
+            This is para two on it's way
+        </p>
+
+        <!-- There are 2 methods to access an element... one is by "class" and another is by "id" ... the way with class we did in previous file.... for ID.... we need to use "  #ID_of_that_file  " and for class we know we do "  .class_of_that_file  " -->
+
+        <p class="amplifier">
+            This is para 3 on it's way
+        </p>
+
+        <p id="p4_ki_ID">
+            This is para 4 on it's way
+        </p>
+
+    </body>
+</html>
+

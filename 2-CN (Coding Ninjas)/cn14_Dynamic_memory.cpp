@@ -1,0 +1,33 @@
+/*
+    ARRAYS ARE NORMALLY STORED IN "STACKS" , HOWEVER STACKS ARE SMALLER IN SIZE , SO IF AN ARRAY HAS
+    LARGE NO. OF ELEMENTS (2000 ELEMENTS) THEN IT SHOULD BE STORED IN HEAPS(WHICH ARE MUCH BIGGER THAN STACKS)
+    STACK HAS "STATIC MEMORY"  AND PROCESS IS CALLED "STATIC MEMORY ALLOCATION"
+    HEAP HAS "DYNAMICE MEMORY" AND PROCESS IS CALLED "DYNAMIC MEMORY ALLOCATION"
+    TILL NOW, WE HAVE ONLY DONE STATIC MEMORY ALLOCATION 
+    LIKE IN LINE-20 , IF WE HAVE TO CREATE AN ARRAY, WHOSE SIZE IS DETERMINED BY USER, THEN IT'S MUCH BETTER TO
+    USE "HEAPS" INSTEAD OF "STACKS" BCOZ THE USER MIGHT ENTER "5000" ELEMENTS KA ARRAY !!!
+    HERE WE LEARN TO MAKE ARRAYS STORED IN "HEAP MEMORY"
+*/
+ 
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+
+int main(){
+
+
+    int n;
+    cin>>n;
+    int arr[n];     //THIS IS NOT A GOOD PRACTICE, BCOZ HERE THE SIZE OF THE ARRAY IS DECIDED IN RUNTIME, AND NOT IN COMPILE TIME;;;; THE USER MIGHT ENTER A HUGE NO. WHICH A STATIC MEMORY CAN'T HOLD!!!
+
+
+    // "new int" gives us an address in the heap memory
+    int *p = new int[50];       //AND HERE WE ARE STORING THE ADDRESS IN "p" , now p can be used as an "array" , just like "int arr[10]" ,,,just like "arr" ,,,"p" is also an address , and all array sytanxes can be used
+    p[0]= 11;
+    p[1]=34; 
+    cout<<*p <<endl;
+
+    return 0;
+}
+

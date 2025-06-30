@@ -1,0 +1,42 @@
+<!-- Here, we will learn how to add "audio" / "video" ... in a different way -->
+
+
+<!DOCTYPE html>
+
+<html>
+    <head><title>Media Tags</title></head>
+
+    <body>
+        <form action="" method="get">
+
+            <audio src = "" controls></audio>
+
+            <!-- You can also put multiple 'audio links' within one "audio" tag and the top one will only run.. if the top one doesn't work due to unsupported media.. it will run the second one and if that doesn't work it will run the third... if the first link works... the computer will not even bother reading further, it will come out of the audio container tag :)... this is how it works -->
+
+            <audio controls>
+                <source src="" type="/mp3">
+                <source src="" type="/mp3">
+                <source src="" type="/mp3">
+            </audio>
+
+            <video controls muted>
+                <source src="" type="/mp4">
+                <source src="" type="/mp4">
+                <source src="" type="/mp4">
+                
+                This line of code will only run if all the above 3 files are of unsupported type for video playing...
+            </video>
+
+
+
+            <!-- FIGURE TAG -->
+
+            <figure>
+                <img src="ItemsForTesting/imagosomu.jpg" width="400">
+
+                <figcaption> --SOMU-- </figcaption>
+            </figure>
+
+        </form>
+    </body>
+</html>

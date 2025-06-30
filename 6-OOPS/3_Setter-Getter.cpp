@@ -1,0 +1,43 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+class student
+{ 
+    public :
+    int year; 
+    
+    private :
+    int marks;      // WE CANNOT ACCESS THIS PRIVATE PROPERTY DIRECTLY (LIKE WE DID IN CASAE OF PUBLIC )    WE WILL NEED TO CREATE/USE SOME FUNCTIONS... REMEMBER : "THESE PRIVATE VALUES ARE ONLY ACCESSIBLE WITHIN THE CLASS" AND NOT ANYWHERE ELSE
+    
+    public :                //NOW WE ARE GOING TO MAKE SOME PUBLIC FUNCS (ACCESSIBLE ANYWHERE :)
+
+    void myMarks_setter_func(int a)
+    {
+        marks=a;    //SINCE THIS FUNCTION IS WITHIN THE CLASS,, IT CAN ACCESS  IT'S PRIVATE PROPERTIES:)
+    }
+    void myMarks_getter_func()
+    {
+        cout<< marks <<endl;
+    }
+
+    
+
+};
+
+
+int main(){
+
+    student somu;
+    // somu.marks =93 ;     //THIS LINE WILL GIVE ERROR BCOZ...PRIVATE PROPERTY IS ONLY ACCESSIBLE WITHIN THE CLASS
+    
+    somu.myMarks_setter_func(93);    //TO SET THE VALUE OF MARKS... WE USE THIS FUNCION... THE ARGUMENT WAS FILLED IN MARKS ... SO, WE CAN ACTUALLY ACCESS/MAKE CHANGES IN PRIVATE PROPERTIES USING FUNCIONS..
+
+
+    somu.my_getter_func();          //WE USE THIS TO DISPLAY THE VALUE OF SOMU'S MARKS
+
+
+    // PRIVATE PROPERTIESE ARE REALLY USEFUL...BCOZ WE CANNOT ACCESS THEM DIRECTLY AND NEED TO USE FUNCTIONS... WE CAN CREATE SOME COMPLICATED/ PASSWORD PROTECTED FUNCTIONS SO THAT NOT EVERYONE IS ABLE TO MAKE CHANGES / SEE YOUR PRIVATE PROPERTIES :)
+    
+
+    return 0;
+}
