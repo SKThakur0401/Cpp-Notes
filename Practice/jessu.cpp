@@ -6,37 +6,47 @@
 #define ll long long int
 using namespace std;
 
+// vector<int> solve(vector<int>& num){
+//     vector<int> ans(num.size(), -1);
+//     stack<int> st;
+
+//     for(int i= num.size()-1; i >=0; i--){
+
+//         while(!st.empty() && st.top() <= num[i]){
+//             st.pop();
+//         }
+
+//         ans[i] = (st.empty())? -1 : st.top();
+//         st.push(num[i]);
+//     }
+//     return ans;
+// }
+
 
 int main(){
 
-    // int d=2;
-    // int e=5;
-    // cout<< (double)d/e <<endl;
-    string s= "110101001010101000110100001011100";
-    int charCount=0;
-    int oneCount=0;
-    // for(char i:s)
-    // {
-    //     charCount++;
-    //     if(i== '1') oneCount++;
-    // }
+    // stack<int> st;
+    // vector<int> num;
+    // num.push_back(3);       // 3  7  1  8  3
+    // num.push_back(7);
+    // num.push_back(1);
+    // num.push_back(8);
+    // num.push_back(3);
 
-    ll n= 8139172936;
-    ll v=1;
-    
-    for (int i = 0; i < 61; i++)
-    {
-        if(v & n)
-        {
-            oneCount++;
-        }
-        v= (v<<1);
+    // vector<int> ans = solve(num);
+
+    unordered_map<int, int> um;
+    um[6] = 36;
+    um[7] = 49;
+    um[8] = 36;
+    um[9] = 36;
+
+    unordered_map<int, int>:: iterator it = um.begin();
+
+    while(it != um.end()){
+        cout<< (*it).first<< " - "<< (*it).second <<endl;
+        it++;
     }
-    
-
-    cout<< charCount <<endl;
-    cout<< oneCount <<endl;
-
     return 0;
 }
 

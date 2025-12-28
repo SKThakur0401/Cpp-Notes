@@ -103,12 +103,34 @@ bool isPresent(BinaryTreeNode<int>* root, int n){
     return root->data == n || isPresent(root->left, n) || isPresent(root->right, n);
 }
 
+
+void morrisInorderTraversal(BinaryTreeNode<int>* root){
+
+    BinaryTreeNode<int>* curr = root;
+    stack<BinaryTreeNode<int>*> st;
+
+    while(!st.empty() || curr)
+    {
+        while(curr){
+            st.push(curr);
+            curr= curr->left;
+        }
+
+        if(!st.empty()){
+            cout<< st.top()->data <<"  ";
+            if(st.top()->right) curr= st.top()->right;
+            st.pop();
+        }
+    }
+}
+
 int main(){
 
     BinaryTreeNode<int>* root = takeInput();
 
     printLvlWise(root);
     cout <<endl;
-    cout<< "Leaf count - "<< countLeaf(root) <<endl;
+    // cout<< "Leaf count - "<< countLeaf(root) <<endl;
+    // morrisInorderTraversal(root);
 }
 
